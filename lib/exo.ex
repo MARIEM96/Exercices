@@ -1,18 +1,16 @@
-defmodule Exo do
-  @moduledoc """
-  Documentation for Exo.
-  """
+defmodule DNA do
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Exo.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  @spec to_rna([char]) :: [char]
+  def to_rna(dna) do
+    Enum.map (dna, fn rna_to_dna(nucleotide) do
+    case nucleotide do
+      ?G -> ?C
+      ?C -> ?G
+      ?T -> ?A
+      ?A -> ?U
+       _  ->'error'
+    end
+  end)
 end
+end
+
