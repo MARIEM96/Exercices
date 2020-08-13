@@ -2,9 +2,9 @@ defmodule DNA do
 
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
-    Enum.map (dna,&rna_to_dna(&1) end)
+    Enum.map (dna,&dna_to_rna(&1) end)
 
-    defp rna_to_dna(n) do
+    defp dna_to_rna(n) do
     case n do
       ?G -> ?C
       ?C -> ?G
